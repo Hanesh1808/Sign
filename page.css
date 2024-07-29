@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.toggle-buttons .toggle-button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #e9ecef; 
+    color: #495057; 
+    font-weight: bold;
+}
+
+.toggle-buttons .toggle-button.active,
+#signIn:target ~ .toggle-buttons .toggle-button:first-child,
+#signUp:target ~ .toggle-buttons .toggle-button:last-child {
+    background-color: #007bff; 
+    color: #ffffff; 
+}
+
+.toggle-buttons .toggle-button:not(.active):not(:target) {
+    background-color: #e9ecef; 
+    color: #495057; 
+}
+
+.forgot-password {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #007bff; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    display: none;
+}
+
+#signIn:target .form,
+#signUp:target .form {
+    display: block;
+}
+
+#signIn:target,
+#signUp:target,
+.form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #343a40; 
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da; 
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #ffffff; 
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 6px;
+    color: #ffffff; 
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .toggle-buttons .toggle-button {
+        padding: 10px;
+        margin: 3px;
+        flex: 1 1 45%;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
